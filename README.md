@@ -29,6 +29,8 @@ Ensure you have node 8+ installed, and run:
 $ node index.js
 ```
 
+Import `postman_collection.json` into Postman to ease API testing.
+
 ### Ping
 Check API status with:
 

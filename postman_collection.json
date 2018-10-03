@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "ad810563-4ee6-4243-bd5f-0ad11f3f961c",
+		"name": "Node.js Master Class - homework assignment #2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"nunosilva800@gmail.com\",\n    \"name\" : \"Nuno Silva\",\n    \"address\" : \"Brazil\",\n    \"password\" : \"password\",\n    \"tosAgreement\" : true\n  }"
+						},
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "7ucukool3upail5y706m"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\" : \"Nuno\",\n    \"lastName\" : \"Silva\",\n    \"phone\" : \"0981445991\",\n    \"password\" : \"password\",\n    \"tosAggreement\" : true\n  }"
+						},
+						"url": {
+							"raw": "localhost:3000/users?email=nunosilva800@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "nunosilva800@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "7ucukool3upail5y706m"
+							},
+							{
+								"key": "",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"nunosilva800@gmail.com\",\n  \"name\" : \"NUNO\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "7ucukool3upail5y706m"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"nunosilva800@gmail.com\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/users?email=nunosilva800@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "nunosilva800@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tokens",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\" : \"nunosilva800@gmail.com\",\n  \"password\" : \"password\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/tokens",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tokens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\" : \"Nuno\",\n    \"lastName\" : \"Silva\",\n    \"phone\" : \"0981445991\",\n    \"password\" : \"password\",\n    \"tosAggreement\" : true\n  }"
+						},
+						"url": {
+							"raw": "localhost:3000/tokens?id=b1wti0bzgh0ssq45v0dy",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tokens"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "b1wti0bzgh0ssq45v0dy"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\" : \"b1wti0bzgh0ssq45v0dy\",\n\t\"extend\" : true\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/tokens",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tokens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/tokens?id=b1wti0bzgh0ssq45v0dy",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tokens"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "b1wti0bzgh0ssq45v0dy"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "menu",
+			"item": []
+		},
+		{
+			"name": "cart",
+			"item": []
+		},
+		{
+			"name": "orders",
+			"item": []
+		},
+		{
+			"name": "ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "sample body"
+				},
+				"url": {
+					"raw": "localhost:3000/ping",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
