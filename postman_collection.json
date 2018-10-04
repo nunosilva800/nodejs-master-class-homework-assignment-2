@@ -37,7 +37,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "7ucukool3upail5y706m"
+								"value": "6vy0i052mldw0i71f3qw"
 							}
 						],
 						"body": {
@@ -45,19 +45,13 @@
 							"raw": "{\n    \"firstName\" : \"Nuno\",\n    \"lastName\" : \"Silva\",\n    \"phone\" : \"0981445991\",\n    \"password\" : \"password\",\n    \"tosAggreement\" : true\n  }"
 						},
 						"url": {
-							"raw": "localhost:3000/users?email=nunosilva800@gmail.com",
+							"raw": "localhost:3000/users",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"users"
-							],
-							"query": [
-								{
-									"key": "email",
-									"value": "nunosilva800@gmail.com"
-								}
 							]
 						}
 					},
@@ -70,16 +64,12 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "7ucukool3upail5y706m"
-							},
-							{
-								"key": "",
-								"value": ""
+								"value": "6vy0i052mldw0i71f3qw"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"email\": \"nunosilva800@gmail.com\",\n  \"name\" : \"NUNO\"\n}"
+							"raw": "{\n  \"email\": \"nunosilva800@gmail.com\",\n  \"name\" : \"Nuno\"\n}"
 						},
 						"url": {
 							"raw": "localhost:3000/users",
@@ -109,19 +99,13 @@
 							"raw": "{\n  \"email\": \"nunosilva800@gmail.com\"\n}"
 						},
 						"url": {
-							"raw": "localhost:3000/users?email=nunosilva800@gmail.com",
+							"raw": "localhost:3000/users",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"users"
-							],
-							"query": [
-								{
-									"key": "email",
-									"value": "nunosilva800@gmail.com"
-								}
 							]
 						}
 					},
@@ -236,11 +220,118 @@
 		},
 		{
 			"name": "menu",
-			"item": []
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "6vy0i052mldw0i71f3qw"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/menu",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"menu"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "cart",
-			"item": []
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "6vy0i052mldw0i71f3qw"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/cart",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "6vy0i052mldw0i71f3qw"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"menu_item_id\": \"22\",\n  \"quantity\": 3\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/cart",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "6vy0i052mldw0i71f3qw"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/cart?menu_item_id=2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart"
+							],
+							"query": [
+								{
+									"key": "menu_item_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "orders",
