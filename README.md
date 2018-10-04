@@ -150,9 +150,12 @@ $ curl GET /cart
 
 #### Update cart
 
+Adds or substracts menu items from cart. 
+Positive values of quantity increment, negative values decrement.
+
 Required fields: 
 - menu_item_id: string
-- quantity: string
+- quantity: integer
 
 Requires `token` header for authentication.
 
@@ -162,7 +165,10 @@ $ curl PUT /cart
 
 #### Destroy cart
 
-Empties the cart.
+Empties the cart or a single item
+
+Optional fields: 
+- menu_item_id: string
 
 Requires `token` header for authentication.
 
