@@ -37,7 +37,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "6vy0i052mldw0i71f3qw"
+								"value": "{{token}}"
 							}
 						],
 						"body": {
@@ -64,7 +64,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "6vy0i052mldw0i71f3qw"
+								"value": "{{token}}"
 							}
 						],
 						"body": {
@@ -91,7 +91,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "7ucukool3upail5y706m"
+								"value": "{{token}}"
 							}
 						],
 						"body": {
@@ -118,6 +118,19 @@
 			"item": [
 				{
 					"name": "create",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "46084c91-8c3a-4e92-ab4a-673fa1465080",
+								"type": "text/javascript",
+								"exec": [
+									"pm.globals.set(\"token\", pm.response.json().id);    ",
+									""
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -228,7 +241,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "6vy0i052mldw0i71f3qw"
+								"value": "{{token}}"
 							}
 						],
 						"body": {},
@@ -257,7 +270,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "6vy0i052mldw0i71f3qw"
+								"value": "{{token}}"
 							}
 						],
 						"body": {},
@@ -281,12 +294,12 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "6vy0i052mldw0i71f3qw"
+								"value": "{{token}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"menu_item_id\": \"22\",\n  \"quantity\": 3\n}"
+							"raw": "{\n  \"menu_item_id\": \"2\",\n  \"quantity\": 3\n}"
 						},
 						"url": {
 							"raw": "localhost:3000/cart",
@@ -308,24 +321,18 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "6vy0i052mldw0i71f3qw"
+								"value": "{{token}}"
 							}
 						],
 						"body": {},
 						"url": {
-							"raw": "localhost:3000/cart?menu_item_id=2",
+							"raw": "localhost:3000/cart",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"cart"
-							],
-							"query": [
-								{
-									"key": "menu_item_id",
-									"value": "2"
-								}
 							]
 						}
 					},
@@ -335,7 +342,65 @@
 		},
 		{
 			"name": "orders",
-			"item": []
+			"item": [
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/orders?id=8j86rbyk07",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "8j86rbyk07"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"stripe_payment_id\": \"st_asd123\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "ping",
