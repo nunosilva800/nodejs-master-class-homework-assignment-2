@@ -173,7 +173,7 @@ Optional fields:
 Requires `token` header for authentication.
 
 ```
-$ curl DELETE /cart
+$ curl DELETE /cart?menu_item_id
 ```
 
 
@@ -193,23 +193,13 @@ $ curl POST /orders
 
 #### Read order 
 
-Requires `token` header for authentication.
-
 Required fields: 
 - id: string
 
-```
-$ curl GET /orders/:id
-```
-
-#### List orders 
-
-Lists all the orders the user has placed.
-
 Requires `token` header for authentication.
 
 ```
-$ curl GET /orders
+$ curl GET /orders?:id
 ```
 
 
