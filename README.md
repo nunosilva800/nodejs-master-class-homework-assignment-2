@@ -26,7 +26,7 @@ This is an open-ended assignment. You may take any direction you'd like to go wi
 Ensure you have node 8+ installed, and run: 
 
 ```
-$ node index.js
+$ NODE_DEBUG=server,stripe node index.js
 ```
 
 Import `postman_collection.json` into Postman to ease API testing.
@@ -183,7 +183,10 @@ $ curl DELETE /cart?menu_item_id
 Creates an order based on the current cart.
 
 Required fields: 
-- stripe_payment_id: string
+- card_number: string
+- card_exp_month: string
+- card_exp_year: string
+- card_cvc: string
 
 Requires `token` header for authentication.
 
