@@ -31,6 +31,17 @@ $ NODE_DEBUG=server,stripe,worker node index.js
 
 Import `postman_collection.json` into Postman to ease API testing.
 
+### Placing an order
+
+Fastest way to place an order is:
+
+1. [create a user](#create-user)
+2. [create a token ](#create-token)
+3. [list menu](#list-menu-items)
+4. [update the cart](#update-cart)
+5. [place the order](#create-order)
+
+
 ### Ping
 Check API status with:
 
@@ -38,6 +49,7 @@ Check API status with:
 $ curl localhost:3000/ping
 ```
 
+---
 
 ### Users
 
@@ -88,6 +100,7 @@ Requires `token` header for authentication.
 $ curl DELETE /users/:email
 ```
 
+---
 
 ### Access Tokens
 
@@ -125,6 +138,7 @@ Required fields:
 $ curl DELETE /tokens/:id
 ```
 
+---
 
 ### Menu
 
@@ -136,6 +150,7 @@ Requires `token` header for authentication.
 $ curl Get /menu
 ```
 
+---
 
 ### Shopping Cart
 Each user has only one cart. A cart may contain any number of menu items.
@@ -176,6 +191,7 @@ Requires `token` header for authentication.
 $ curl DELETE /cart?menu_item_id
 ```
 
+---
 
 ### Orders
 
@@ -205,6 +221,7 @@ Requires `token` header for authentication.
 $ curl GET /orders?:id
 ```
 
+---
 
 ### Note on HTTPS
 
