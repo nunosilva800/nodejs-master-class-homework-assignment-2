@@ -385,7 +385,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"stripe_payment_id\": \"st_asd123\"\n}"
+							"raw": "{\n  \"card_number\": \"4242424242424242\",\n  \"card_exp_month\": \"12\",\n  \"card_exp_year\": \"2020\",\n  \"card_cvc\": \"123\"\n}"
 						},
 						"url": {
 							"raw": "localhost:3000/orders",
